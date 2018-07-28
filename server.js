@@ -53,6 +53,12 @@ hbs.registerPartials(__dirname + '/views/partials', (error) => {
         });
     });
 
+    app.get('/projects', (request, response) => {
+        response.render('projects.hbs', {
+            pageTitle: 'Projects Page',
+        });
+    });
+
     app.get('/bad', (request, response) => {
         response.send({
             errorMessage: 'Error handling request'
